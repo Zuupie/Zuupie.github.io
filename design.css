@@ -21,6 +21,7 @@ header{
 }
 
 nav{
+    width: 100%;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -37,6 +38,16 @@ nav .icon{
     height: 55px;
     margin-right: 2em;
     border-radius: 20%;
+}
+
+.menu-links {
+    display: flex;
+}
+
+.burger-menu{
+    display: none;
+    width: 55px;
+    height: 55px;
 }
 
 /*-------Main Area-------*/
@@ -188,6 +199,34 @@ section a:hover{
         margin: 1rem 4% 0 4%;
     }
 
+    nav{
+        justify-content: space-between;
+    }
+
+    .menu-links {
+        display: none;
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        background-color:#ffffff;
+        flex-direction: column;
+        width: 11rem;
+        padding: 1rem;
+        border-radius: 10px 0 0 10px;
+        border-color: #a1c4c9;  
+        border-width: 3.5px 0 3.5px 3.5px;
+        border-style: solid;
+    }
+
+    .burger-menu {
+        display: flex;
+        cursor: pointer;
+    }
+
+    .menu-links.show {
+        display: flex;
+    }
+
     .grid-container{
         display: grid;
         grid-template-rows: 23% 30% 22% 25%;
@@ -210,10 +249,6 @@ section a:hover{
         height: auto;
         margin: 0;
         padding: 0;
-    }
-
-    #fourth{
-        margin-top: 1rem;
     }
 
     footer{
