@@ -182,13 +182,11 @@ section a:hover{
 
     /* 
     - Bürger-Menü erstellen für die Header-Links
-    - Bild anpassen!!! SAFARI
      */
 
     header, main{
-        margin: 0 4% 0 4%;
+        margin: 1rem 4% 0 4%;
     }
-    
 
     .grid-container{
         display: grid;
@@ -202,6 +200,11 @@ section a:hover{
         height: auto;
     }
 
+    .grid-item-image{
+        display: flex;
+        align-items: center;
+    }
+
     .grid-item-image img{
         max-width: 80%;
         height: auto;
@@ -209,10 +212,17 @@ section a:hover{
         padding: 0;
     }
 
-    .grid-item-image{
-        max-width: 80%;
-        display: flex;
-        align-items: center;
+    footer{
+        margin: 2rem 0rem 0rem 0rem;
     }
 }
 
+/* Für Safari CK Bild Maße, übergang von Mobile zu Desktop View */
+@media (max-width: 1021px) and (min-width:675px){
+    .grid-item-image img{
+        max-width: 50%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+    }
+}
